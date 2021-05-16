@@ -1,0 +1,27 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+.navTD{
+    width: 100vw;
+}
+.navUL{
+    width: 100%;
+}
+.navLi{
+width: 25%;
+width: 25%;
+width: 25%;
+width: 25%;
+}
+.nav-link{
+    color:gray;
+}
+.zNav{
+    z-index: 100;
+}
+.sizedBox{
+    height:30vh;
+    width: 100%;
+  }
