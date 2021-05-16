@@ -7,8 +7,7 @@ function App() {
 
   return (
     <div>
-      <NewzNav ></NewzNav>
-      
+      <NewzNav></NewzNav>
     </div>
     
   );
