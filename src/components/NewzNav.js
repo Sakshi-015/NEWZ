@@ -91,7 +91,7 @@ class NewzNav extends React.Component {
                 <div className= {(showNav ? 'show' : '') + 'collapse navbar-collapse justify-content-sm-center'} id="navbarCollapse">
                 <ul className="nav navUL">
                     <li className="nav-item navLi" align="center" ><a className={"nav-link "+  this.state.inActive} onClick={this.indiaNews} >India News</a></li>
-                    <li className="nav-item navLi" align="center" ><a className={"nav-link "+  this.state.gloActive}  onClick={this.globalNews}>Entertainment News</a></li>
+                    <li className="nav-item navLi" align="center" ><a className={"nav-link "+  this.state.gloActive}  onClick={this.globalNews}>Global News</a></li>
                     <li className="nav-item navLi" align="center" ><a className={"nav-link "+  this.state.techActive} onClick={this.techNews} >Tech News</a></li>
                     <li className="nav-item navLi" align="center" ><a className={"nav-link "+  this.state.finActive}  onClick={this.financeNews}>Business News</a></li>
                 </ul> 
@@ -105,7 +105,7 @@ class NewzNav extends React.Component {
     <div className="sizedBox"></div>
       <div className={this.state.techAct}><NewzCard url="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=adcfbd941d7d4877af76660311716563"></NewzCard></div>
       <div className={this.state.inAct}><NewzCard url="https://newsapi.org/v2/top-headlines?country=in&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
-      <div className={this.state.gloAct}><NewzCard url="https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
+      <div className={this.state.gloAct}><NewzCard url="https://newsapi.org/v2/top-headlines?language=en&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
       <div className={this.state.finAct}><NewzCard url="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
     </div>
     </div>
