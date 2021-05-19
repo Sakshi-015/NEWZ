@@ -103,10 +103,10 @@ class NewzNav extends React.Component {
     </div>
     <div>
     <div className="sizedBox"></div>
-      <div className={this.state.techAct}><NewzCard url="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=adcfbd941d7d4877af76660311716563"></NewzCard></div>
-      <div className={this.state.inAct}><NewzCard url="https://newsapi.org/v2/top-headlines?country=in&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
-      <div className={this.state.gloAct}><NewzCard url="https://newsapi.org/v2/top-headlines?language=en&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
-      <div className={this.state.finAct}><NewzCard url="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
+      <div className={this.state.techAct}><NewzCard url="http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=adcfbd941d7d4877af76660311716563"></NewzCard></div>
+      <div className={this.state.inAct}><NewzCard url="http://newsapi.org/v2/top-headlines?country=in&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
+      <div className={this.state.gloAct}><NewzCard url="http://newsapi.org/v2/top-headlines?language=en&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
+      <div className={this.state.finAct}><NewzCard url="http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
     </div>
     </div>
     );
