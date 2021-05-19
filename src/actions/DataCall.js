@@ -9,7 +9,7 @@ export function getNews(address) {
       method: 'GET',
     //   params: payload,
      headers: {Upgrade: HTTP/3.0,
-      Connection: Upgrade}`},
+      Connection: Upgrade},
       url: address,
   });
 }
