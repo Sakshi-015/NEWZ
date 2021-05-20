@@ -8,8 +8,7 @@ export function getNews(address) {
   return axios({
       method: 'GET',
     //   params: payload,
-     headers: {Upgrade: HTTPS/3.0,
-      Connection: Upgrade},
+    //   headers: {Authorization: `${user.token}`},
       url: address,
   });
 }

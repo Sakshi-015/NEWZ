@@ -87,7 +87,7 @@ class NewzNav extends React.Component {
             <td><button className="navbar-toggler" type="button" onClick={this.toggleNav}><span className="navbar-toggler-icon"></span></button></td>
         </tr>
         <tr> 
-            <td className="navTD" >  
+            <td className="navTD" colSpan={2}>  
                 <div className= {(showNav ? 'show' : '') + 'collapse navbar-collapse justify-content-sm-center'} id="navbarCollapse">
                 <ul className="nav navUL">
                     <li className="nav-item navLi" align="center" ><a className={"nav-link "+  this.state.inActive} onClick={this.indiaNews} >India News</a></li>
@@ -98,8 +98,12 @@ class NewzNav extends React.Component {
             </div>
         </td>
         </tr>
+        <tr><td colSpan={2}><div class="grad-bar"></div></td></tr>
+        
     </table>    
+   
 </nav>
+
     </div>
     <div>
     <div className="sizedBox"></div>

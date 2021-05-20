@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {getNews} from '../actions/DataCall.js';
+import './NewzCard.css';
 
 
 class NewzCard extends Component {
@@ -15,9 +16,6 @@ class NewzCard extends Component {
   }
   
           componentDidMount(){
-            this.setState({
-                urlLink : this.state.urlLink,
-            });
             getNews(this.state.urlLink).then((res)=>{
               console.log(res);
               this.setState({
@@ -33,7 +31,7 @@ class NewzCard extends Component {
     
     return (
       <div>
-        <div className="container zIndex">
+        <div className="container ">
         <div className="row">
 
           {
@@ -45,11 +43,7 @@ class NewzCard extends Component {
             <div className="card-body">
               <h5 className="card-title">{obj.title}</h5>
               <p className="card-text">{obj.description}</p>
-              {/* <span onClick={()=>{
-                this.changeUrl(obj.url);
-              }} > */}
-                <a href={obj.url} target="_blank" className="btn btn-dark">Read More...</a>
-                {/* </span> */}
+                <a href={obj.url} target="_blank" className="btn btn-dark">Read More...</a>  
             </div>
           </div>
         </div>

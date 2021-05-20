@@ -22,3 +22,9 @@ width: 25%;
     height:30vh;
     width: 100%;
   }
+  .grad-bar {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient( #1156B2, #ffff, #1156B2, #ffff  );
+    background-size: 400% 400%;
+  }
