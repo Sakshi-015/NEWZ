@@ -111,19 +111,15 @@ console.log(scrollTop,"scrollTop");
     <table className="zNav">
         <tr>
             {
-                  scrollTop<350   ?
-                  <>
-                <td align="center" className="navTD">
-                <div><img src={logo} className=""  height = "140em" ></img></div>
-                </td>
-                </>
-                :
                 <>
-                 <td align="left" className="navTD">
-                <div><img src={logo} className=""  height = "140em" ></img></div>
+                 <td style = {{width: "10%"}}className="navTD">
+                <div><img src={logo} height = "140em" ></img></div>
                 </td>
-                <td align="center" className="navTD">
-                <div><p>This is some tag line</p></div>
+                <td  align="center"style = {{width: "60%",}} className="navTD">
+                <div><p className="tagLine">READ THE WORLD TODAY !</p></div>
+                </td>
+                <td  className="navTD">
+                <div><input></input></div>
                 </td>
                 </>
             }
@@ -131,7 +127,7 @@ console.log(scrollTop,"scrollTop");
             <td><button className="navbar-toggler" type="button" onClick={this.toggleNav}><span className="navbar-toggler-icon"></span></button></td>
         </tr>
         <tr> 
-            <td className="navTD" colSpan={2}>  
+            <td className="navTD" colSpan={3}>  
                 <div className= {(showNav ? 'show' : '') + 'collapse navbar-collapse justify-content-sm-center'} id="navbarCollapse">
                 <ul className="nav navUL">
                     <li className="nav-item navLi" align="center" ><a className={"nav-link "+  this.state.inActive} onClick={this.indiaNews} >India News</a></li>
@@ -142,7 +138,7 @@ console.log(scrollTop,"scrollTop");
             </div>
         </td>
         </tr><br/>
-        <tr><td colSpan={2}><div class="grad-bar"></div></td></tr>
+        <tr><td colSpan={3}><div class="grad-bar"></div></td></tr>
         
     </table>    
    

@@ -68,3 +68,12 @@ width: 25%;
     background: linear-gradient( #1156B2, #ffff, #1156B2, #ffff  );
     background-size: 400% 400%;
   }
+  p{
+    font-family: Snell Roundhand, "cursive";
+    font-style: italic;
+    font-size:1.8em;
+    color: rgb(37,105,141);
+  }
+  input{
+    box-decoration: none;
+  }
