@@ -118,9 +118,6 @@ console.log(scrollTop,"scrollTop");
                 <td  align="center"style = {{width: "60%",}} className="navTD">
                 <div><p className="tagLine">READ THE WORLD TODAY !</p></div>
                 </td>
-                <td  className="navTD">
-                <div><input></input></div>
-                </td>
                 </>
             }
           
