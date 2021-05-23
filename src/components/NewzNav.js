@@ -2,18 +2,46 @@ import React from 'react';
 import './NewzNav.css';
 import NewzCard from './NewzCard';
 import logo from './whiteglobe.gif';
-
-
+import $ from "jquery";
 class NewzNav extends React.Component {
     
     constructor(props) {
         super(props);
-        this.state = { showNav: true, inAct: "d-block", techAct: "d-none",gloAct: "d-none",finAct: "d-none",inActive: "text-primary" ,gloActive:"text-muted",techActive:"text-muted" ,finActive:"text-muted" };
+        this.state = { 
+            showNav: true, 
+            inAct: "d-block",
+             techAct: "d-none",
+             gloAct: "d-none",
+             finAct: "d-none",
+             inActive: "text-primary" ,
+             gloActive:"text-muted",
+             techActive:"text-muted" ,
+             finActive:"text-muted" ,
+             scrollTop:0,
+        
+        };
         this.toggleNav = this.toggleNav.bind(this);
        this.indiaNews = this.indiaNews.bind(this);
        this.globalNews = this.globalNews.bind(this);
        this.financeNews = this.financeNews.bind(this);
        this.techNews = this.techNews.bind(this);
+       this.handleScroll = this.handleScroll.bind(this);
+    }
+
+    
+    handleScroll(event){
+        var scrollTop = $(window).scrollTop();
+console.log(scrollTop,"scrollTop");
+   
+        this.setState({
+            scrollTop: scrollTop
+        });
+    }
+    
+    componentDidMount(){
+        window.addEventListener('scroll', this.handleScroll);
+    
+     
     }
 
     toggleNav() {
@@ -75,16 +103,31 @@ class NewzNav extends React.Component {
 
 
     render() {
-        const { showNav } = this.state   
+        const { showNav,scrollTop } = this.state   
     return (
         <div>
         <div>
         <nav className="navbar navbar-expand-sm navbar-light bg-light justify-content-sm-between position-fixed zNav">
     <table className="zNav">
         <tr>
-            <td align="center" className="navTD">
-            <div><img src={logo}  height = "140em" ></img></div>
-            </td>
+            {
+                  scrollTop<350   ?
+                  <>
+                <td align="center" className="navTD">
+                <div><img src={logo} className=""  height = "140em" ></img></div>
+                </td>
+                </>
+                :
+                <>
+                 <td align="left" className="navTD">
+                <div><img src={logo} className=""  height = "140em" ></img></div>
+                </td>
+                <td align="center" className="navTD">
+                <div><p>This is some tag line</p></div>
+                </td>
+                </>
+            }
+          
             <td><button className="navbar-toggler" type="button" onClick={this.toggleNav}><span className="navbar-toggler-icon"></span></button></td>
         </tr>
         <tr> 
@@ -108,10 +151,10 @@ class NewzNav extends React.Component {
     </div>
     <div>
     <div className="sizedBox"></div>
-      <div className={this.state.techAct}><NewzCard url="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=adcfbd941d7d4877af76660311716563"></NewzCard></div>
-      <div className={this.state.inAct}><NewzCard url="https://newsapi.org/v2/top-headlines?country=in&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
-      <div className={this.state.gloAct}><NewzCard url="https://newsapi.org/v2/top-headlines?language=en&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
-      <div className={this.state.finAct}><NewzCard url="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
+      <div data-aos="fade-up" data-aos-delay="750" className={this.state.techAct}><NewzCard url="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=adcfbd941d7d4877af76660311716563"></NewzCard></div>
+      <div  data-aos="fade-up" data-aos-delay="750" className={this.state.inAct}><NewzCard url="https://newsapi.org/v2/top-headlines?country=in&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
+      <div  data-aos="fade-up" data-aos-delay="750" className={this.state.gloAct}><NewzCard url="https://newsapi.org/v2/top-headlines?language=en&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
+      <div data-aos="fade-up" data-aos-delay="750"  className={this.state.finAct}><NewzCard url="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=4d9e2198e3cf43cabf347c77f09b8d34"></NewzCard></div>
     </div>
     </div>
     );
