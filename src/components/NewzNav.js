@@ -1,6 +1,7 @@
 import React from 'react';
 import './NewzNav.css';
 import NewzCard from './NewzCard';
+import logo from './whiteglobe.gif';
 
 
 class NewzNav extends React.Component {
@@ -82,7 +83,7 @@ class NewzNav extends React.Component {
     <table className="zNav">
         <tr>
             <td align="center" className="navTD">
-                <div><img src="https://i.ibb.co/G3ByJZx/Logos.png" height="120"></img></div>
+            <div><img src={logo}  height = "140em" ></img></div>
             </td>
             <td><button className="navbar-toggler" type="button" onClick={this.toggleNav}><span className="navbar-toggler-icon"></span></button></td>
         </tr>
