@@ -37,7 +37,7 @@ class NewzCard extends Component {
           {
               data && data.length>0 && data.map((obj,index)=>(
                  <>
-                 <div className="col-sm-3 mt-5">
+                 <div className="col-sm-6 mt-5">
           <div className="card">
             <img className="card-img-top" src={obj.urlToImage} alt="Card image"/>
             <div className="card-body">

@@ -17,6 +17,8 @@ width: 25%;
 }
 .zNav{
     z-index: 100;
+    background-image: url("../backGround.jpg");
+    background-size: 100% 100%;
 }
 .sizedBox{
     height:30vh;
