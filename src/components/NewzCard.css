@@ -1,4 +1,9 @@
 .card
 {
+    border: 2px solid black;
     border-radius: 10px;
+    background-color: transparent;
+}
+.card-body{
+    background-color: transparent;
 }

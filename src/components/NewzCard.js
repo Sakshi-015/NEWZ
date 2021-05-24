@@ -31,7 +31,7 @@ class NewzCard extends Component {
     
     return (
       <div>
-        <div className="container ">
+        <div className="container colo">
         <div className="row">
 
           {
