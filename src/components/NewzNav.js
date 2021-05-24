@@ -134,7 +134,7 @@ console.log(scrollTop,"scrollTop");
                 </ul> 
             </div>
         </td>
-        </tr><br/>
+        </tr>
         <tr><td colSpan={3}><div class="grad-bar"></div></td></tr>
         
     </table>    
