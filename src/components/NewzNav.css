@@ -35,7 +35,7 @@ a {
   }
   
   a:active::before {
-    background-color: #0a0a0a;
+    background-color: rgb(37,105,141);
   }
   
   a:hover::before,
@@ -74,6 +74,6 @@ width: 25%;
     font-size:1.8em;
     color: rgb(37,105,141);
   }
-  input{
-    box-decoration: none;
+  .decoration{
+    color: rgb(37,105,141);
   }
