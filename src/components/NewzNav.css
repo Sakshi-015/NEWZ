@@ -40,3 +40,6 @@ width: 25%;
   .decoration{
     color: rgb(37,105,141);
   }
+  .nav-item{
+cursor: pointer;
+  }
